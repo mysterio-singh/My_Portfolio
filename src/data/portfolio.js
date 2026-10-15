@@ -27,7 +27,7 @@ export const personalInfo = {
     instagram: "https://www.instagram.com/sahil_.singh53"
   },
   resume: {
-    path: "/resume.pdf",
+    path: "public/sahilresumee (1).pdf",
     available: true,
     lastUpdated: "October 2026",
     filename: "Sahil_Singh_Resume.pdf"
