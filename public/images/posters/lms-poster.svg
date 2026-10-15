@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0c"/>
+      <stop offset="50%" stop-color="#141419"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <linearGradient id="redGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E50914" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FF3B30" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1F1F28" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#111116" stop-opacity="0.95"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#252530" stroke-width="0.8" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+
+  <!-- Ambient Red Cinematic Lighting -->
+  <circle cx="200" cy="150" r="300" fill="#E50914" opacity="0.08" filter="blur(60px)"/>
+  <circle cx="1000" cy="550" r="350" fill="#3B82F6" opacity="0.05" filter="blur(80px)"/>
+
+  <!-- Center Card Terminal UI -->
+  <rect x="180" y="90" width="840" height="495" rx="16" fill="url(#cardGrad)" stroke="#2F2F3D" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect x="180" y="90" width="840" height="52" rx="16" fill="#181822"/>
+  <circle cx="215" cy="116" r="6" fill="#E50914"/>
+  <circle cx="235" cy="116" r="6" fill="#F59E0B"/>
+  <circle cx="255" cy="116" r="6" fill="#10B981"/>
+
+  <text x="600" y="122" fill="#8E8EA0" font-family="'JetBrains Mono', monospace" font-size="14" text-anchor="middle" font-weight="500">
+    LMS_CORE_ARCH // Django ORM &amp; Relational Schema
+  </text>
+
+  <!-- Status Badge -->
+  <rect x="880" y="104" width="115" height="24" rx="12" fill="#F59E0B" fill-opacity="0.15" stroke="#F59E0B" stroke-width="1"/>
+  <text x="937" y="120" fill="#F59E0B" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="700">
+    ● IN PROGRESS
+  </text>
+
+  <!-- Interior Code & Diagrams -->
+  <!-- Left Side: Relational Models -->
+  <rect x="220" y="175" width="350" height="360" rx="10" fill="#13131A" stroke="#262633"/>
+  <text x="245" y="215" fill="#E50914" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700"># models.py (Django ORM)</text>
+
+  <text x="245" y="255" fill="#A5B4FC" font-family="'JetBrains Mono', monospace" font-size="13">class Course(models.Model):</text>
+  <text x="270" y="280" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="13">title = CharField(max_length=200)</text>
+  <text x="270" y="305" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="13">instructor = ForeignKey(User)</text>
+  <text x="270" y="330" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="13">created_at = DateTimeField()</text>
+
+  <text x="245" y="380" fill="#A5B4FC" font-family="'JetBrains Mono', monospace" font-size="13">class Enrollment(models.Model):</text>
+  <text x="270" y="405" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="13">student = ForeignKey(User)</text>
+  <text x="270" y="430" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="13">course = ForeignKey(Course)</text>
+  <text x="270" y="455" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="13">is_active = BooleanField(default=True)</text>
+  <text x="270" y="480" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="13"># Relational Schema Synced</text>
+
+  <!-- Right Side: Tech Pills & Architecture -->
+  <rect x="600" y="175" width="380" height="165" rx="10" fill="#13131A" stroke="#262633"/>
+  <text x="625" y="215" fill="#FFFFFF" font-family="sans-serif" font-size="17" font-weight="700">Architecture Scope</text>
+  <text x="625" y="245" fill="#9CA3AF" font-family="sans-serif" font-size="13">Web-based dynamic learning platform</text>
+  <text x="625" y="270" fill="#9CA3AF" font-family="sans-serif" font-size="13">Structured MySQL relational entity tables</text>
+  <text x="625" y="295" fill="#9CA3AF" font-family="sans-serif" font-size="13">Django MVT template rendering &amp; admin controls</text>
+  <text x="625" y="320" fill="#E50914" font-family="sans-serif" font-size="13" font-weight="600">Active Stage: Backend Schema &amp; Routing</text>
+
+  <!-- Bottom Right: Verified Stack Pills -->
+  <g transform="translate(600, 370)">
+    <rect x="0" y="0" width="110" height="38" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="55" y="24" fill="#38BDF8" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">Python</text>
+
+    <rect x="125" y="0" width="110" height="38" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="180" y="24" fill="#4ADE80" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">Django</text>
+
+    <rect x="250" y="0" width="110" height="38" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="305" y="24" fill="#F59E0B" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">MySQL</text>
+
+    <rect x="0" y="55" width="170" height="38" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="85" y="79" fill="#E2E8F0" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">HTML5 &amp; CSS3</text>
+
+    <rect x="185" y="55" width="175" height="38" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="272" y="79" fill="#E2E8F0" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">Relational ORM</text>
+  </g>
+
+  <!-- Big Watermark Title at Bottom -->
+  <text x="600" y="635" fill="#333340" font-family="'Outfit', sans-serif" font-size="28" font-weight="900" letter-spacing="6" text-anchor="middle">
+    SAHIL SINGH // LEARNING MANAGEMENT SYSTEM
+  </text>
+</svg>
